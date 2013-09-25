@@ -1,5 +1,5 @@
 <?php
-class Excellence_Custom_IndexController extends Mage_Core_Controller_Front_Action
+class Excellence_Samples_IndexController extends Mage_Core_Controller_Front_Action
 {
     public function indexAction()
     {

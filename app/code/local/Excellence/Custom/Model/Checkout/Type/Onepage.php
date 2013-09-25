@@ -1,5 +1,5 @@
 <?php
-class Excellence_Custom_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepage{
+class Excellence_Samples_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepage{
 	public function saveExcellence($data){
 		if (empty($data)) {
 			return array('error' => -1, 'message' => $this->_helper->__('Invalid data.'));

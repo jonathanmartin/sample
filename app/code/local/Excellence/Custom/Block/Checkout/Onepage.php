@@ -1,5 +1,5 @@
 <?php
-class Excellence_Custom_Block_Checkout_Onepage extends Mage_Checkout_Block_Onepage{
+class Excellence_Samples_Block_Checkout_Onepage extends Mage_Checkout_Block_Onepage{
 
 	public function getSteps()
 	{
@@ -8,9 +8,7 @@ class Excellence_Custom_Block_Checkout_Onepage extends Mage_Checkout_Block_Onepa
 		if (!$this->isCustomerLoggedIn()) {
 			$steps['login'] = $this->getCheckout()->getStepData('login');
 		}
-
-		//New Code Adding step excellence here
-		$stepCodes = array('excellence','billing', 'shipping', 'excellence2', 'shipping_method', 'payment', 'excellence3','review');
+		$stepCodes = array('samples','billing', 'shipping', 'shipping_method', 'payment','review');
 
 		foreach ($stepCodes as $step) {
 			$steps[$step] = $this->getCheckout()->getStepData($step);
@@ -20,8 +18,7 @@ class Excellence_Custom_Block_Checkout_Onepage extends Mage_Checkout_Block_Onepa
 
 	public function getActiveStep()
 	{
-		//New Code, make step excellence active when user is already logged in
-		return $this->isCustomerLoggedIn() ? 'excellence' : 'login';
+		return $this->isCustomerLoggedIn() ? 'samples' : 'login';
 	}
 
 }

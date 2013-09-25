@@ -1,6 +1,6 @@
 <?php
 
-class Excellence_Custom_Helper_Data extends Mage_Core_Helper_Abstract
+class Excellence_Samples_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
 }
